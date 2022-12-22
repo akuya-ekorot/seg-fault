@@ -5,7 +5,7 @@
 - .c files are human-readable, written in plain text using alphanumeric and math symbols
 - This makes C is a high-level language.
 - Computer hardware, on the other hand, communicate using low-level languages.
-  - Low-level languages can either be _Machine language_ and _Assembly language_.
+  - Low-level languages can either be **_Machine language_** and **_Assembly language_**.
   - Machine language is in binary, ones and zeros.
   - Assembly language is written with a set of letters and symbols.
 - Necessary to convert .c files to a language the computer hardware can understand.
