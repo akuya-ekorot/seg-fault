@@ -20,10 +20,18 @@
 - Compiling command on linux
 
 ```bash
-akuya@linux: gcc -[options] [filename]
+seg@fault: gcc -[options] [filename]
 ```
 
-- As an example, let's create a simple C file called main.c. The code contained in `main.c` looks like this.
+- As an example, let's create a simple C file called main.c.
+
+```bash
+seg@fault: touch main.c
+seg@fault: ls
+main.c
+```
+
+- The code contained in `main.c` looks like this.
 
 ```c
 #include <stdio.h>
@@ -32,11 +40,19 @@ akuya@linux: gcc -[options] [filename]
  * main - entry point of the program. Prints "Hello World" in the terminal
  *
  * Return: Always 0. (Success)
- */
+*/
 int main()
 {
 	printf("Hello World.\n");
 
 	return (0);
 }
+```
+
+- To compile the `main.c` file, run the following command on your terminal.
+
+```bash
+seg@fault: gcc main.c
+seg@fault: ls
+main.c a.out
 ```
