@@ -1,9 +1,11 @@
 # Compilation Process for C programs with GCC
 
-- Files end with a .c extension.
+- C is a programming language.
+- Programs written in C end with a .c extension.
 - .c files are human-readable, written in plain text using alphanumeric and math symbols
-- C is a high-level language.
-- Computer hardware communicate using low-level languages. Machine language and Assembly language.
+- This makes C is a high-level language.
+- Computer hardware, on the other hand, communicate using low-level languages.
+  - Low-level languages can either be _Machine language_ and _Assembly language_.
   - Machine language is in binary, ones and zeros.
   - Assembly language is written with a set of letters and symbols.
 - Necessary to convert .c files to a language the computer hardware can understand.
@@ -49,7 +51,8 @@ int main()
 }
 ```
 
-- To compile the `main.c` file, run the following command on your terminal.
+- To compile the `main.c` file, run the `gcc main.c` command.
+- This will create a file called `a.out` which is an executable file.
 
 ```bash
 seg@fault: gcc main.c
