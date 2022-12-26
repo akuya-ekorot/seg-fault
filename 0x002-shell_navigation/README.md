@@ -76,3 +76,40 @@ seg@fault:
 seg@fault: ls -F
 Applications/  Documents/  Desktop/  Downloads/  main.c  script.sh*
 ```
+
+- Apart from the `-F` option, the `ls` command has many more options.
+- To figure out how to use a command and all the options it accepts, you can run the `ls` command with `--help` option.
+
+```bash
+seg@fualt: ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if neither -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options, too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      scale sizes by SIZE before printing them; e.g.,
+                               '--block-size=M' prints sizes in units of
+                               1,048,576 bytes; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=>@|) to entries
+...        ...        ...
+```
+
+- If you've been following along, you might find your terminal looking a bit too cluttered for you, with all you previous commands and output still there.
+- You can clean up your terminal with the `clear` command. Now you have a clean terminal.
+- The `clear` command also has a nice option. Running the clear command with the `-X` command clears your terminal but you now have the option of scrolling up to see all the previous commands you ran.
+- I love adding that option. Best of both worlds.
