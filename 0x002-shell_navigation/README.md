@@ -38,7 +38,6 @@ Navigate the Linux System Like A Pro.
 - it organizes our data into files, which hold information, and directories (also folders) which hold files and other directories.
 - various commands are used to create, inspect, rename, copy, move and delete files and directories.
 - Before you go anywhere, figure out where you are first. That sounds like something a monk would say.
-
   - when you're in the terminal, you can check where you are using the `pwd` command.
   - (which stands for 'print working directory')
   - Knowing where we are before running commands is important because most commands read and write files in the current working directory.
@@ -47,5 +46,19 @@ Navigate the Linux System Like A Pro.
 ```bash
 seg@fault: pwd
 /home/akuya
+seg@fault:
+```
+
+- Before going any further, let's try and understand how the whole file system is organized.
+- On Ubuntu, the folder structure looks like this.
+  [//]: # "Image goes here"
+- The root directory holds everything. It is represented with a `/`
+- Now that you know where you are in the file system, how can you see the contents of the folder you're in?
+- This is where the command `ls` comes in.
+- Head over to your terminal and type the command
+
+```bash
+seg@fault: ls
+Applications	Documents	Desktop	Downloads
 seg@fault:
 ```
