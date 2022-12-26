@@ -59,6 +59,22 @@ seg@fault:
 
 ```bash
 seg@fault: ls
-Applications  Documents  Desktop  Downloads
+Applications  Documents  Desktop  Downloads  main.c  script.sh
 seg@fault:
+```
+
+- The output depends on what you actually have in you home folder.
+- The `ls` command prints the names of directories and files in the current working directory.
+- This command, as many others, also take in options (also known as flags) to modify the output of the command.
+- Options are usually prefixed with a `-`.
+- An example of an option to pass to the `ls` command is the `-F` option.
+- This option classifies the output by adding a marker to a file or directory to indicate what they are.
+  - a trailing `/` shows that it is a directory
+  - `@` indicates a link
+  - `*` indicates an executable
+- Here's how you run the `ls` command with the `-F` option
+
+```bash
+seg@fault: ls -F
+Applications/  Documents/  Desktop/  Downloads/  main.c  script.sh*
 ```
