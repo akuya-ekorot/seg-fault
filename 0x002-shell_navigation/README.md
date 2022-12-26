@@ -14,21 +14,14 @@ Bash Commands
 
 Navigate the Linux System Like A Pro.
 
-## Objectives of the video
-
-- navigate in a linux system
-- list files and directories
-- display the content of a file
-- create and remove files or directories
-- move, rename or copy files or directories
-
 ## Navigate the Linux System Like A Pro.
 
 ### Objectives
 
-- Move around the computer
 - See what files and directories I have
+- Move around the computer
 - Specify the location of a file or a directory
+- Relative and absolute paths
 
 ### Notes
 
@@ -42,7 +35,7 @@ Navigate the Linux System Like A Pro.
   - Here's an example of running `pwd` in your home directory.
 
 ```bash
-seg@fault: pwd
+seg@fault:~$ pwd
 /home/akuya
 seg@fault:
 ```
@@ -56,9 +49,9 @@ seg@fault:
 - Head over to your terminal and type the command
 
 ```bash
-seg@fault: ls
+seg@fault:~$ ls
 Applications  Documents  Desktop  Downloads  main.c  script.sh
-seg@fault:
+seg@fault:~$
 ```
 
 - The output depends on what you actually have in you home folder.
@@ -73,7 +66,7 @@ seg@fault:
 - Here's how you run the `ls` command with the `-F` option
 
 ```bash
-seg@fault: ls -F
+seg@fault:~$ ls -F
 Applications/  Documents/  Desktop/  Downloads/  main.c  script.sh*
 ```
 
@@ -81,7 +74,7 @@ Applications/  Documents/  Desktop/  Downloads/  main.c  script.sh*
 - To figure out how to use a command and all the options it accepts, you can run the `ls` command with `--help` option.
 
 ```bash
-seg@fualt: ls --help
+seg@fualt:~$ ls --help
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if neither -cftuvSUX nor --sort is specified.
@@ -109,7 +102,142 @@ Mandatory arguments to long options are mandatory for short options, too.
 ...        ...        ...
 ```
 
+- The other way to learn more about a command is by using the `man` command, followed by the command you want to know about. For example `man ls`.
+- The `man` command, which stands for manual, turns your terminal to a manual page of the command.
+- You can scroll the manual page using the up and down arrow or using the vim commands `k` and `j` for up and down respectively.
+- To quit out of the manual page, press the `q` key.
+
+- Here are some interesting options for the `ls` command.
+
+  - This command lists all content of the current working directory, including the hidden files starting with a `.`.
+
+  ```bash
+  seg@fault:~$ ls -a
+  ```
+
+  - This command lists all content of the current working directory just like the previous one, but in long format.
+
+  ```bash
+  seg@fault:~$ ls -al
+  ```
+
+  - This command lists contents of the current working directory and sorts them by time, newest first.
+
+  ```bash
+  seg@fault:~$ ls -t
+  ```
+
+  - Here's a little homework. What options would you pass together with the `ls` command to list contents of the current working directory in long formart reverse-ordered by the time they were modiefied?
+  - Comment your answer in the comment section below!
+
 - If you've been following along, you might find your terminal looking a bit too cluttered for you, with all you previous commands and output still there.
 - You can clean up your terminal with the `clear` command. Now you have a clean terminal.
 - The `clear` command also has a nice option. Running the clear command with the `-X` command clears your terminal but you now have the option of scrolling up to see all the previous commands you ran.
 - I love adding that option. Best of both worlds.
+
+- So far, we've been looking at listing contents of the current working directory, but you can also list the content of other directories.
+- You can do this by passing the path of the directory you're targeting after the options in the `ls` command.
+- Here's an example of displaying the content of the Downloads directory inside the current working directory.
+
+```bash
+seg@fault:~$ ls -a Downloads/
+```
+
+- The path `Downloads/` that we passed in the previous command is a **relative path**.
+- A relative path is a path that considers the current working directory.
+- There are several interesting ways of navigating using the relative path.
+- Before we get into it, let me first introduce the `cd` command.
+- This command stands for **change directory**. And from the name, we get to know what it actually does, it takes us to another directory.
+- The `cd` command takes in a path as it's arguement.
+- If we wanted to go into the `Downloads/` directory, we would use the following command.
+
+```bash
+seg@fault:~$ cd Downloads/
+seg@fault:~/Downloads$
+```
+
+- Another way to go into a folder contained in the current working directory would be by adding the relative path `./`
+- Here's an example
+
+```bash
+seg@fault:~$ cd ./Downloads/
+seg@fault:~/Downloads$
+```
+
+- The `./` is a relative path that represents the current working directory.
+- If we wanted to go back to the parent directory we could run the following command
+
+```bash
+seg@fault:~/Downloads$ cd ..
+seg@fault:~$
+```
+
+- The `..` is a relative path that represents a folder up, or the parent directory.
+- You can chain the `..` to go two folders up. Here's how you would go to the home folder from the movies folder contained in the downloads folder.
+
+```bash
+seg@fault:~/Downloads/Movies$ cd ../..
+seg@fault:~$
+```
+
+- Since the home folder was two directories up in the previous example, another way to go to the home directory is to use the relative path symbol for home which is the `~` tilde symbol.
+- Here's how to do it.
+
+```bash
+seg@fault:~/Downloads/Movies$ cd ~
+seg@fault:~$
+```
+
+- Or we can just simply type `cd` which always takes us back home.
+
+```bash
+seg@fault:~/Downloads/Movies$ cd
+seg@fault:~$
+```
+
+- I wish there was a way to use this in real life, I wouldn't have been lost that much as a kid.
+
+- Instead of using relative paths, we can also use **absolute paths**.
+- Absolute paths are the full path of the file or directory from the root `/`
+- We actually saw an absolute path before when we ran the `pwd` command.
+- Let's run it again and see the absolute path of the current working directory
+
+```bash
+seg@fault:~$ pwd
+/home/akuya
+seg@fault:~$
+```
+
+- If we wanted to go to the download folder from home, we could pass the absolute path like so
+
+```bash
+seg@fault:~$cd /home/akuya/Downloads
+seg@fault:~/Downloads
+```
+
+- Another useful symbol to pass to `cd` is the `-` symbol.
+- This symbol takes us the previous directory we were in.
+- Think of it as the back button in a browser.
+- As an example, let's say we were in the Movies folder. let's navigate there using this command. I'll pass in the absolute path for this example.
+
+```bash
+seg@fault:~$ cd /home/akuya/Downloads/Movies
+seg@fault:~/Downloads/Movies$
+```
+
+- Then, let's assume we need to access the `Documents` folder contained in our home directory.
+- I'll navigate there using the relative path.
+
+```bash
+seg@fault:~/Downloads/Movies$ cd ../../Documents
+seg@fault:~/Documents$
+```
+
+- If we wanted to go back to our movies folder now, instead of passing the relative or absolute paths, we could pass the `-` and that would take us to the folder we were last.
+
+```bash
+seg@fault:~/Documents$ cd -
+seg@fault:~/Downloads/Movies$
+```
+
+- If we wrote the same command again, it would take us back to the Documents folder.
