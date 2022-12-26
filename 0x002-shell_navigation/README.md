@@ -44,8 +44,8 @@ Navigate the Linux System Like A Pro.
   - Knowing where we are before running commands is important because most commands read and write files in the current working directory.
   - Here's an example of running `pwd` in your home directory.
 
-  ```bash
-  seg@fault: pwd
-  /home/akuya
-  seg@fault:
-  ```
+```bash
+seg@fault: pwd
+/home/akuya
+seg@fault:
+```
