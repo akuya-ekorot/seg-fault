@@ -59,6 +59,6 @@ seg@fault:
 
 ```bash
 seg@fault: ls
-Applications Documents Desktop Downloads
+Applications  Documents  Desktop  Downloads
 seg@fault:
 ```
