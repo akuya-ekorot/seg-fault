@@ -4,16 +4,14 @@
 
 ### Keywords
 
-Linux Command Line
-Linux commands
-Linux terminal
-Terminal commands
+Linux Command Line,
+Linux commands,
+Linux terminal,
+Terminal commands,
 Bash Commands
 
 ### Draft Titles
 
-Top Linux Commands that Will Blow Your Mind???
-Top Linux Commands To Make You A Better Developer
 Navigate the Linux System Like A Pro.
 
 ## Objectives of the video
@@ -51,7 +49,7 @@ seg@fault:
 
 - Before going any further, let's try and understand how the whole file system is organized.
 - On Ubuntu, the folder structure looks like this.
-  [//]: # "Image goes here"
+- [//]: # "Image goes here"
 - The root directory holds everything. It is represented with a `/`
 - Now that you know where you are in the file system, how can you see the contents of the folder you're in?
 - This is where the command `ls` comes in.
