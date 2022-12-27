@@ -14,7 +14,7 @@ Bash Commands
 
 Navigate the Linux System Like A Pro.
 
-## Navigate the Linux System Like A Pro.
+## Navigate the Linux System Like A Pro: ls and cd Commands.
 
 ### Objectives
 
@@ -23,14 +23,25 @@ Navigate the Linux System Like A Pro.
 - Specify the location of a file or a directory
 - Relative and absolute paths
 
-### Notes
+### Intro
 
-- the part of the os responsible for managing files and directories is called the file system.
-- it organizes our data into files, which hold information, and directories (also folders) which hold files and other directories.
-- various commands are used to create, inspect, rename, copy, move and delete files and directories.
+This is the first video in the series Navigate the Linux System Like A Pro.
+
+At the end of this video, you'll learn
+
+- how to see what files and directories you have in your linux system
+- how to move around the computer by changing your working directory
+- how to specify the location of a file or a directory
+- and the difference between relative and absolute paths.
+
+Let's jump straight in.
+
+### Main
+
 - Before you go anywhere, figure out where you are first. That sounds like something a monk would say.
+  - and that brings us to our first command.
   - when you're in the terminal, you can check where you are using the `pwd` command.
-  - (which stands for 'print working directory')
+  - (which stands for 'print working directory') and does exactly what the name says. It prints the path to your current working directory.
   - Knowing where we are before running commands is important because most commands read and write files in the current working directory.
   - Here's an example of running `pwd` in your home directory.
 
@@ -44,6 +55,8 @@ seg@fault:
 - On Ubuntu, the folder structure looks like this.
 - [//]: # "Image goes here"
 - The root directory holds everything. It is represented with a `/`
+- Every other directory is contained inside it.
+- From our example above, we can see we are in the directory `akuya` which is inside the `home` directory which is inside the `/` directory.
 - Now that you know where you are in the file system, how can you see the contents of the folder you're in?
 - This is where the command `ls` comes in.
 - Head over to your terminal and type the command
@@ -56,8 +69,8 @@ seg@fault:~$
 
 - The output depends on what you actually have in you home folder.
 - The `ls` command prints the names of directories and files in the current working directory.
-- This command, as many others, also take in options (also known as flags) to modify the output of the command.
-- Options are usually prefixed with a `-`.
+- This command, as many others, also take in options to modify the output of the command.
+- Options are usually prefixed with a `-` or `--`.
 - An example of an option to pass to the `ls` command is the `-F` option.
 - This option classifies the output by adding a marker to a file or directory to indicate what they are.
   - a trailing `/` shows that it is a directory
@@ -127,17 +140,17 @@ Mandatory arguments to long options are mandatory for short options, too.
   seg@fault:~$ ls -t
   ```
 
-  - Here's a little homework. What options would you pass together with the `ls` command to list contents of the current working directory in long formart reverse-ordered by the time they were modiefied?
-  - Comment your answer in the comment section below!
+  - Here's a little homework. What options would you pass along with the `ls` command to list contents of the current working directory in long formart reverse-ordered by the time they were modiefied?
+  - Write your answer in the comment section below!
 
 - If you've been following along, you might find your terminal looking a bit too cluttered for you, with all you previous commands and output still there.
 - You can clean up your terminal with the `clear` command. Now you have a clean terminal.
-- The `clear` command also has a nice option. Running the clear command with the `-X` command clears your terminal but you now have the option of scrolling up to see all the previous commands you ran.
+- The `clear` command also has a nice option. Running the clear command with the `-X` option clears your terminal but you now have the option of scrolling up to see all the previous commands you ran.
 - I love adding that option. Best of both worlds.
 
 - So far, we've been looking at listing contents of the current working directory, but you can also list the content of other directories.
 - You can do this by passing the path of the directory you're targeting after the options in the `ls` command.
-- Here's an example of displaying the content of the Downloads directory inside the current working directory.
+- Here's an example of displaying the content of the Downloads directory which is inside the current working directory.
 
 ```bash
 seg@fault:~$ ls -a Downloads/
@@ -233,7 +246,7 @@ seg@fault:~/Downloads/Movies$ cd ../../Documents
 seg@fault:~/Documents$
 ```
 
-- If we wanted to go back to our movies folder now, instead of passing the relative or absolute paths, we could pass the `-` and that would take us to the folder we were last.
+- If we wanted to go back to our movies folder now, instead of passing the relative or absolute paths, we could pass the `-` and that would take us to the folder we were at last.
 
 ```bash
 seg@fault:~/Documents$ cd -
@@ -241,3 +254,18 @@ seg@fault:~/Downloads/Movies$
 ```
 
 - If we wrote the same command again, it would take us back to the Documents folder.
+
+## Recap
+
+- We have looked `pwd` command which prints the current working directory.
+- We then looked at the `ls` command which prints the contents of a directory.
+- We looked at various options that the `ls` command takes.
+- We also learnt about the `cd` command. Which changes the directory we are in the to the specified one.
+- We then looked at relative and absolute paths and how to use them to navigate the file system.
+
+## Outro
+
+- Thank you so much for watching.
+- Please like this video and subscribe for more content like this.
+- If you're a C programmer, or just getting started with C, check this other video I made where I went into detail explaining the Compilation of C programs using GCC.
+- Thank you, see you on the next one.
