@@ -41,7 +41,7 @@ Let's jump straight in.
 - Before you go anywhere, figure out where you are first. That sounds like something a monk would say.
   - and that brings us to our first command.
   - when you're in the terminal, you can check where you are using the `pwd` command.
-  - (which stands for 'print working directory') and does exactly what the name says. It prints the path to your current working directory.
+  - (which stands for 'print working directory') and it does exactly what the name says. It prints the path to your current working directory.
   - Knowing where we are before running commands is important because most commands read and write files in the current working directory.
   - Here's an example of running `pwd` in your home directory.
 
@@ -143,7 +143,7 @@ Mandatory arguments to long options are mandatory for short options, too.
   - Here's a little homework. What options would you pass along with the `ls` command to list contents of the current working directory in long formart reverse-ordered by the time they were modiefied?
   - Write your answer in the comment section below!
 
-- If you've been following along, you might find your terminal looking a bit too cluttered for you, with all you previous commands and output still there.
+- If you've been following along, you might find your terminal looking a bit too cluttered for you, with all your previous commands and output still there.
 - You can clean up your terminal with the `clear` command. Now you have a clean terminal.
 - The `clear` command also has a nice option. Running the clear command with the `-X` option clears your terminal but you now have the option of scrolling up to see all the previous commands you ran.
 - I love adding that option. Best of both worlds.
@@ -267,5 +267,5 @@ seg@fault:~/Downloads/Movies$
 
 - Thank you so much for watching.
 - Please like this video and subscribe for more content like this.
-- If you're a C programmer, or just getting started with C, check this other video I made where I went into detail explaining the Compilation of C programs using GCC.
+- If you're a C programmer, or just getting started with C, check this other video I made where I went into detail explaining the Compilation process of C programs using GCC.
 - Thank you, see you on the next one.
